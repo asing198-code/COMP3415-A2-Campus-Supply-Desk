@@ -95,10 +95,10 @@ From the folder containing `README.md`, `supplydesk`, and `tests`, run:
 python -m unittest discover -s tests -v
 ```
 
-The supplied tests should finish with:
+The full suite (the 4 starter tests plus the added tests) should finish with:
 
 ```text
-Ran 4 tests
+Ran 51 tests
 
 OK
 ```
@@ -153,6 +153,11 @@ Avoid running two instances that change the same save file simultaneously.
 - **`supplydesk/storage.py`** — Loading and saving local JSON data.
 - **`supplydesk/catalog.json`** — Initial products, prices, and stock for a new session.
 - **`tests/test_smoke.py`** — Four starter tests.
+- **`tests/test_service.py`** — Service tests for normal, boundary, invalid, and must-preserve behavior.
+- **`tests/test_interfaces.py`** — Individual-command and interactive-menu tests.
+- **`tests/test_express.py`** — CR-01 express-delivery tests.
+- **`tests/helpers.py`** — Shared temporary-save-file test fixture.
+- **`evidence/`** — Saved test runs (baseline, after refactoring, after defect fixes, after CR-01) and the work log.
 
 The menu and individual commands use the same service and saved data. When a later requirement affects available choices or displayed information, review both interfaces.
 
@@ -172,7 +177,12 @@ You can perform operations directly instead of using the menu. These commands ar
 python -m supplydesk catalog
 python -m supplydesk quote --customer regular --item notebook:2
 python -m supplydesk quote --customer student --fulfillment delivery --item hoodie:2
+python -m supplydesk quote --customer student --fulfillment express --item hoodie:2
 ```
+
+Fulfillment options are `pickup` (free, the default), `delivery` ($6.00, free when the order is
+$100.00 or more after discount), and `express` ($12.00, never waived). The menu's fulfillment prompt
+lists the same options, and `python -m supplydesk quote --help` describes them.
 
 Use repeated `--item` options for multiple items:
 

@@ -1,5 +1,7 @@
 ﻿"""Interactive terminal adapter; business rules remain in OrderService."""
 
+from supplydesk.service import CUSTOMER_TYPES, FULFILLMENT_OPTIONS
+
 
 def money(cents):
     return f"${cents // 100}.{cents % 100:02d}"
@@ -25,7 +27,7 @@ def show_order(order):
 def read_request(service):
     show_catalog(service.catalog())
     print("Enter product IDs from the table. Blank product ID finishes the item list.")
-    customer = input("Customer type [regular/student] (Enter = regular): ").strip() or "regular"
+    customer = input(f"Customer type [{'/'.join(CUSTOMER_TYPES)}] (Enter = regular): ").strip() or "regular"
     items = []
     while True:
         product_id = input("Product ID (Enter = finish): ").strip()
@@ -38,7 +40,7 @@ def read_request(service):
             print("Please enter a whole number. Re-enter this item.")
             continue
         items.append({"product_id": product_id, "quantity": quantity})
-    fulfillment = input("Fulfillment [pickup/delivery] (Enter = pickup): ").strip() or "pickup"
+    fulfillment = input(f"Fulfillment [{'/'.join(FULFILLMENT_OPTIONS)}] (Enter = pickup): ").strip() or "pickup"
     return customer, items, fulfillment
 
 

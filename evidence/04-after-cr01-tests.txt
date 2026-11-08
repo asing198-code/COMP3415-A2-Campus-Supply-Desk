@@ -1,0 +1,56 @@
+test_cli_help_mentions_express (test_express.ExpressInterfaceTests.test_cli_help_mentions_express) ... ok
+test_cli_place_and_show_express (test_express.ExpressInterfaceTests.test_cli_place_and_show_express) ... ok
+test_cli_quote_example_from_cr01 (test_express.ExpressInterfaceTests.test_cli_quote_example_from_cr01) ... ok
+test_menu_blank_fulfillment_still_defaults_to_pickup (test_express.ExpressInterfaceTests.test_menu_blank_fulfillment_still_defaults_to_pickup) ... ok
+test_menu_prompt_lists_express_and_quotes_it (test_express.ExpressInterfaceTests.test_menu_prompt_lists_express_and_quotes_it) ... ok
+test_express_order_survives_reopen_and_cancel (test_express.ExpressOrderLifecycleTests.test_express_order_survives_reopen_and_cancel) ... ok
+test_quote_matches_placed_order (test_express.ExpressOrderLifecycleTests.test_quote_matches_placed_order) ... ok
+test_cr01_examples (test_express.ExpressPricingTests.test_cr01_examples) ... ok
+test_express_is_never_waived_but_standard_still_is (test_express.ExpressPricingTests.test_express_is_never_waived_but_standard_still_is) ... ok
+test_express_keeps_existing_validation_and_stock_rules (test_express.ExpressPricingTests.test_express_keeps_existing_validation_and_stock_rules) ... ok
+test_other_fulfillment_values_remain_invalid (test_express.ExpressPricingTests.test_other_fulfillment_values_remain_invalid) ... ok
+test_student_discount_unchanged_and_excludes_express_fee (test_express.ExpressPricingTests.test_student_discount_unchanged_and_excludes_express_fee) ... ok
+test_parser_rejects_bad_options (test_interfaces.CommandTests.test_parser_rejects_bad_options) ... ok
+test_place_show_cancel_round_trip (test_interfaces.CommandTests.test_place_show_cancel_round_trip) ... ok
+test_quote_command_prints_json_with_defaults (test_interfaces.CommandTests.test_quote_command_prints_json_with_defaults) ... ok
+test_service_errors_exit_nonzero_with_message (test_interfaces.CommandTests.test_service_errors_exit_nonzero_with_message) ... ok
+test_bad_quantity_asks_again_and_errors_return_to_menu (test_interfaces.MenuTests.test_bad_quantity_asks_again_and_errors_return_to_menu) ... ok
+test_confirmed_placement_is_saved (test_interfaces.MenuTests.test_confirmed_placement_is_saved) ... ok
+test_declining_placement_saves_nothing (test_interfaces.MenuTests.test_declining_placement_saves_nothing) ... ok
+test_end_of_input_exits_cleanly (test_interfaces.MenuTests.test_end_of_input_exits_cleanly) ... ok
+test_quote_uses_blank_defaults (test_interfaces.MenuTests.test_quote_uses_blank_defaults) ... ok
+test_discount_rounds_half_cent_upward (test_service.BoundaryBehaviourTests.test_discount_rounds_half_cent_upward) ... ok
+test_duplicate_lines_within_stock_stay_separate (test_service.BoundaryBehaviourTests.test_duplicate_lines_within_stock_stay_separate) ... ok
+test_free_delivery_threshold_is_at_least_10000_after_discount (test_service.BoundaryBehaviourTests.test_free_delivery_threshold_is_at_least_10000_after_discount) ... ok
+test_ordering_all_remaining_stock_then_one_more (test_service.BoundaryBehaviourTests.test_ordering_all_remaining_stock_then_one_more) ... ok
+test_quantity_limits_1_and_99_accepted_0_and_100_rejected (test_service.BoundaryBehaviourTests.test_quantity_limits_1_and_99_accepted_0_and_100_rejected) ... ok
+test_regular_customer_never_gets_discount (test_service.BoundaryBehaviourTests.test_regular_customer_never_gets_discount) ... ok
+test_student_discount_threshold_is_at_least_5000_cents (test_service.BoundaryBehaviourTests.test_student_discount_threshold_is_at_least_5000_cents) ... ok
+test_duplicate_lines_combined_over_stock_are_rejected (test_service.InvalidBehaviourTests.test_duplicate_lines_combined_over_stock_are_rejected) ... ok
+test_invalid_customer_and_fulfillment (test_service.InvalidBehaviourTests.test_invalid_customer_and_fulfillment) ... ok
+test_invalid_item_lists (test_service.InvalidBehaviourTests.test_invalid_item_lists) ... ok
+test_malformed_save_file_raises_instead_of_resetting (test_service.InvalidBehaviourTests.test_malformed_save_file_raises_instead_of_resetting) ... ok
+test_quantities_must_be_real_integers (test_service.InvalidBehaviourTests.test_quantities_must_be_real_integers) ... ok
+test_quantity_above_stock (test_service.InvalidBehaviourTests.test_quantity_above_stock) ... ok
+test_rejected_request_after_saved_order_changes_nothing (test_service.InvalidBehaviourTests.test_rejected_request_after_saved_order_changes_nothing) ... ok
+test_unknown_order_id (test_service.InvalidBehaviourTests.test_unknown_order_id) ... ok
+test_list_orders_keeps_placement_order_including_cancelled (test_service.NormalBehaviourTests.test_list_orders_keeps_placement_order_including_cancelled) ... ok
+test_placement_deducts_stock_and_numbers_orders (test_service.NormalBehaviourTests.test_placement_deducts_stock_and_numbers_orders) ... ok
+test_quote_line_contains_product_details (test_service.NormalBehaviourTests.test_quote_line_contains_product_details) ... ok
+test_quote_lines_and_totals_for_spec_examples (test_service.NormalBehaviourTests.test_quote_lines_and_totals_for_spec_examples) ... ok
+test_cancel_keeps_original_details_and_restores_stock (test_service.PreservedBehaviourTests.test_cancel_keeps_original_details_and_restores_stock) ... ok
+test_cancelled_ids_are_not_reused (test_service.PreservedBehaviourTests.test_cancelled_ids_are_not_reused) ... ok
+test_cancelling_twice_does_not_restore_stock_again (test_service.PreservedBehaviourTests.test_cancelling_twice_does_not_restore_stock_again) ... ok
+test_catalog_and_quote_do_not_create_save_file (test_service.PreservedBehaviourTests.test_catalog_and_quote_do_not_create_save_file) ... ok
+test_defaults_are_pickup (test_service.PreservedBehaviourTests.test_defaults_are_pickup) ... ok
+test_quote_matches_subsequent_order (test_service.PreservedBehaviourTests.test_quote_matches_subsequent_order) ... ok
+test_reopening_preserves_orders_stock_and_numbering (test_service.PreservedBehaviourTests.test_reopening_preserves_orders_stock_and_numbering) ... ok
+test_cancel_order_restores_stock (test_smoke.OrderSmokeTests.test_cancel_order_restores_stock) ... ok
+test_order_can_be_reopened (test_smoke.OrderSmokeTests.test_order_can_be_reopened) ... ok
+test_regular_pickup_quote (test_smoke.OrderSmokeTests.test_regular_pickup_quote) ... ok
+test_student_delivery_quote (test_smoke.OrderSmokeTests.test_student_delivery_quote) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 0.029s
+
+OK
